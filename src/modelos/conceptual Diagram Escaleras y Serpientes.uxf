@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>450</x>
+      <y>264</y>
+      <w>204</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>ControlSerpientesEscaleras
+--
+casillas(ArrayList)
+
+Dado
+numeroDado
+fichaJugador
+
+botOne
+botTwo 
+--
+ControlSerpientesEscaleras()
+createBoard()
+
+findSnakeTail(snakeHead)
+findStairUp(stairDown)
+
+tirarDado()
+moverBotJugadores()
+moverFichaJugador()
+estadoFicha()
+
+getNumeroDado()
+getBotOne()
+getBotTwo()
+getFichaJugador()
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>42</x>
+      <y>324</y>
+      <w>276</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>VistaGUI
+--
+escucha
+titulo
+JPanel: zonaResultados, panelInicial, zonaJuego
+JButton: salir, dado
+JLabel: jugador, botOne, botTwo
+JTextField: fichaJugador, fichaBotOne, fichaBotTwo
+imagen: ImageIcon
+ControlSerpientesEscaleras
+
+timers
+--
+VistaGUI()
+initGUI()
+menu()
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>786</x>
+      <y>240</y>
+      <w>150</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>BotJugador
+--
+numeroDado
+indexCasilla
+nombre
+--
+hilo -&gt; run()
+getNumeroDado()
+getIndexCasilla()
+getNombre()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>768</x>
+      <y>462</y>
+      <w>312</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>Casilla
+--
+int:
+index
+cabezaSerpiente
+colaSerpiente
+arribaEscalera
+abajoEscalera
+--
+Casilla()
+getters and setters
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>798</x>
+      <y>372</y>
+      <w>114</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Dado
+--
+number0
+--
+getNumber()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>78</x>
+      <y>564</y>
+      <w>198</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>PrincipalSerpientesEscaleras
+--
+main()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>372</y>
+      <w>150</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1</panel_attributes>
+    <additional_attributes>230.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>648</x>
+      <y>270</y>
+      <w>150</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=2</panel_attributes>
+    <additional_attributes>230.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>648</x>
+      <y>366</y>
+      <w>162</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1</panel_attributes>
+    <additional_attributes>250.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>648</x>
+      <y>408</y>
+      <w>132</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1</panel_attributes>
+    <additional_attributes>200.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>168</x>
+      <y>462</y>
+      <w>18</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+</diagram>
